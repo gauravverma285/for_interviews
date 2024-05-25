@@ -85,3 +85,7 @@
     # # Call the function
     # bubble_sort_descending(li)
     # print("Sorted list in descending order:", li)
+
+
+
+### what is migrations and types of migrations and how can i do migrations for single class in modals.py file.
