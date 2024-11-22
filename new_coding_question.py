@@ -39,3 +39,21 @@ if is_harshad_number(number):
     print(f"{number} is a Harshad number")
 else:
     print(f"{number} is not a Harshad number")
+
+
+
+# 1. how to create lamda function for get data from candra db & sve to astra db 
+
+# how many roles in aws 
+
+# howm nay eks system  in aws 
+
+# create docker yaml File
+
+# tell about monitering tool in aws  & gcp
+
+# 1
+# 121
+# 1221
+# 123321
+# 12344321

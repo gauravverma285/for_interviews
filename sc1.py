@@ -35,13 +35,14 @@ def simulate_separate_key_presses(keys, interval):
     keys (list): List of keys to press one by one.
     interval (int): The time interval (in seconds) between key presses.
     """
+    print('jj')
     # print(f"Starting separate key presses simulation for {keys} every {interval} seconds. Press Ctrl+C to stop.")
     try:
         while True:
             for key in keys:
                 pyautogui.press(key)
                 # print(f"Key '{key}' pressed.")
-                print('k')
+                # print('k')
                 time.sleep(1)  # Add a delay between individual key presses
             time.sleep(interval - len(keys))  # Adjust interval for total time
     except KeyboardInterrupt:
