@@ -25,6 +25,25 @@
                     }
                     }}
 
+# for IMPS (((((Failure)))))
+
+{"Single_Payment_Corp_Resp":{
+    "Header":{
+        "TranID":"9533294526",
+        "Corp_ID":"SINGHTKLTD",
+        "Maker_ID":"M005",
+        "Checker_ID":"C003",
+        "Approver_ID":"A003",
+        "Status":"Failure",
+        "Resp_cde":"CZ",
+        "Error_Desc":"FAILURE Test Case Not Found"},
+        "Body":{
+            "channelpartnerrefno":"IMPSSINGHTKLTD9533294526",
+            "RRN":"420801000140"},
+            "Signature":{
+                "Signature":"Signature"}
+                }}
+
 # for NEFT ((((In Progress))))
 
 {"Single_Payment_Corp_Resp":{
@@ -107,6 +126,28 @@
             "Signature":{"Signature":"Signature"}}}
 
 
+# FT Failure
+
+{"Single_Payment_Corp_Resp":{
+    "Header":{
+        "TranID":"8450362108",
+        "Corp_ID":"SINGHTKLTD",
+        "Maker_ID":"M005",
+        "Checker_ID":"C003",
+        "Approver_ID":"A003",
+        "Status":"Failure",
+        "Error_Cde":"162",
+        "Error_Desc":"The account does not exist."},
+        "Signature":{
+            "Signature":"Signature"}
+            }}
+
+
 
 # NEFT success ------> status fetched 
 # RTGS success ------> status fetched 
+
+
+
+# eror 500
+# {"httpCode":"500","httpMessage":"Internal Server Error","moreInformation":"Internal Error"}

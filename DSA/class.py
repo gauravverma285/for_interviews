@@ -1,3 +1,15 @@
+import random
+
+
+def generate_transaction_id():
+        # while True:
+    withdrawal_id = str(random.randint(1000000000, 9999999999))
+            # if not MyUser.objects.filter(withdrawal_id=withdrawal_id).exists():
+    return withdrawal_id
+
+mywidid = generate_transaction_id()
+
+
 # import requests
 # import json
 
@@ -6,7 +18,7 @@
 # payload = json.dumps({
 #   "Single_Payment_Corp_Req": {
 #     "Header": {
-#       "TranID": "1Abc22249Q17",
+#       "TranID": mywidid,
 #       "Corp_ID": "SINGHTKLTD",
 #       "Maker_ID": "M005",
 #       "Checker_ID": "C003",
@@ -79,35 +91,86 @@ url = "apideveloper.rblbank.com"
 payload = json.dumps({
   "Single_Payment_Corp_Req": {
     "Header": {
-      "TranID": "1Abc22249Q78",
+      "TranID": mywidid,
       "Corp_ID": "SINGHTKLTD",
       "Maker_ID": "M005",
       "Checker_ID": "C003",
       "Approver_ID": "A003"
     },
+    # "Body": {
+    #   "Amount": "100.01",
+    #   "Debit_Acct_No": "409001591454",
+    #   "Debit_Acct_Name": "TEJU MAHTO",
+    #   "Debit_IFSC": "RBLB1122123",
+    #   "Debit_Mobile": "1234567890",
+    #   "Debit_TrnParticulars": "FARIDA",
+    #   "Debit_PartTrnRmks": "SURESH",
+    #   "Ben_IFSC": "DNSB0000021",
+    #   "Ben_Acct_No": "109566016481",
+    #   "Ben_Name": "SINGLE PAYMENT",
+    #   "Ben_Address": "MUMBAI",
+    #   "Ben_BankName": "ABC123123",
+    #   "Ben_BankCd": "176",
+    #   "Ben_BranchCd": "0123",
+    #   "Ben_Email": "mail@gmail.com",
+    #   "Ben_Mobile": "9895527234",
+    #   "Ben_TrnParticulars": "VIBEESH_@123",
+    #   "Ben_PartTrnRmks": "SINGLE PAYMENT",
+    #   "Issue_BranchCd": "0112",
+    #   "Mode_of_Pay": "NEFT",
+    #   "Remarks": "PAYEMNT QUEUE"
+    # },
+
+    # "Body": {
+		# 	"Amount": "2",
+		# 	"Debit_Acct_No": "1000112010000333",
+		# 	"Debit_Acct_Name": "TEJU MAHTO",
+		# 	"Debit_IFSC": "RBLB1122123",
+		# 	"Debit_Mobile": "1234567890",
+		# 	"Debit_TrnParticulars": "FARIDA",
+		# 	"Debit_PartTrnRmks": "SURESH",
+		# 	"Ben_IFSC": "DNSB0000021",
+		# 	"Ben_Acct_No": "1256905",
+		# 	"Ben_Name": "SINGLE PAYMENT",
+		# 	"Ben_Address": "MUMBAI",
+		# 	"Ben_BankName": "ABC123123",
+		# 	"Ben_BankCd": "176",
+		# 	"Ben_BranchCd": "0123",
+		# 	"Ben_Email": "mail@gmail.com",
+		# 	"Ben_Mobile": "9895527234",
+		# 	"Ben_TrnParticulars": "VIBEESH_@123",
+		# 	"Ben_PartTrnRmks": "SINGLE PAYMENT",
+		# 	"Issue_BranchCd": "0112",
+		# 	"Mode_of_Pay": "IMPS",
+		# 	"Remarks": "PAYEMNT QUEUE"		
+		# },
+        
     "Body": {
-      "Amount": "200.01",
-      "Debit_Acct_No": "409001591454",
-      "Debit_Acct_Name": "TEJU MAHTO",
-      "Debit_IFSC": "RBLB1122123",
-      "Debit_Mobile": "1234567890",
-      "Debit_TrnParticulars": "FARIDA",
-      "Debit_PartTrnRmks": "SURESH",
-      "Ben_IFSC": "DNSB0000021",
-      "Ben_Acct_No": "109566016481",
-      "Ben_Name": "SINGLE PAYMENT",
-      "Ben_Address": "MUMBAI",
-      "Ben_BankName": "ABC123123",
-      "Ben_BankCd": "176",
-      "Ben_BranchCd": "0123",
-      "Ben_Email": "mail@gmail.com",
-      "Ben_Mobile": "9895527234",
-      "Ben_TrnParticulars": "VIBEESH_@123",
-      "Ben_PartTrnRmks": "SINGLE PAYMENT",
-      "Issue_BranchCd": "0112",
-      "Mode_of_Pay": "NEFT",
-      "Remarks": "PAYEMNT QUEUE"
-    },
+			"Amount": "2",
+			"Debit_Acct_No": "1000112010000333",
+			"Debit_Acct_Name": "TEJU MAHTO",
+			"Debit_IFSC": "RBLB1122123",
+			"Debit_Mobile": "1234567890",
+			"Debit_TrnParticulars": "FARIDA",
+			"Debit_PartTrnRmks": "SURESH",
+			"Ben_IFSC": "DNSB0000021",
+			"Ben_Acct_No": "1256905",
+			"Ben_Name": "SINGLE PAYMENT",
+			"Ben_Address": "MUMBAI",
+			"Ben_BankName": "ABC123123",
+			"Ben_BankCd": "176",
+			"Ben_BranchCd": "0123",
+			"Ben_Email": "mail@gmail.com",
+			"Ben_Mobile": "9895527234",
+			"Ben_TrnParticulars": "VIBEESH_@123",
+			"Ben_PartTrnRmks": "SINGLE PAYMENT",
+			"Issue_BranchCd": "0112",
+			"Mode_of_Pay": "RTGS",
+			"Remarks": "PAYEMNT QUEUE"		
+		},
+
+
+
     "Signature": {
       "Signature": "Signature"
     }
